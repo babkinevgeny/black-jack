@@ -18,12 +18,14 @@ describe("Deck", () => {
         
         deck.shuffleDeck();
         
-        let result = false;
+        let result;
         
         for(let i = 0; i < oldCards.length; i++) {
             if (oldCards[i].suit != deck.cards[i].suit && oldCards[i].rank != deck.cards[i].rank) {
                 result = true;
                 break;
+            } else {
+                result = false; 
             }
         }
         
